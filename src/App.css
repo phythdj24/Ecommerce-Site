@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Main{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  background-color: #272529;
+  padding: 10px;
+
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+.card{
+  background: rgb(122, 115, 115);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  
+}
+img {
+  height: 80px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: #764abc;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #513282;
+}
