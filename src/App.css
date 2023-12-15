@@ -17,6 +17,28 @@
   
 }
 
+.cartmain{
+  display: grid;
+  top: 0;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  transform: translate(-50% 50%);
+  background-color: #272529;
+  padding: 10px; 
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.addcart{
+  background: rgb(122, 115, 115);
+  width: 70%;
+ 
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px
+
+}
+
+
 
 .card{
   background: rgb(122, 115, 115);
