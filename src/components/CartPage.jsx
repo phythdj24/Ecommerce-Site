@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const CartPage = ({ cartItems , setCartItems }) => {
+const CartPage = ({cartItems, setCartItems}) => {
       
   const removeFromCart = (index)=>{
       const updateCartItems = [...cartItems];
@@ -22,7 +22,7 @@ const CartPage = ({ cartItems , setCartItems }) => {
         <div className='addcart' key={index}>
           <img src={item.image} alt="" />
           <p>{item.title} - {item.price}$</p>
-          <button onClick={() => removeFromCart(index)} >Remove</button>
+          <button onClick={removeFromCart} >Remove</button>
           
         </div>
       ))}

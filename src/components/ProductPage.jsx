@@ -2,8 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 
-const ProductPage = ({ cartItems, setCartItems }) => {
+const ProductPage = ({cartItems, setCartItems}) => {
   const [products, setProducts] = useState([]);
+
+
+  const addToCart = (id, title, price, image) =>{
+    const newItem = {id, title, price, image};
+    setCartItems([...cartItems, newItem])
+  };
 
   const fetchProducts = async () => {
     try {
@@ -19,10 +25,11 @@ const ProductPage = ({ cartItems, setCartItems }) => {
     fetchProducts();
   }, []);
 
-  const addToCart = (id, title, price, image) => {
-    const newItem = { id, title, price, image };
-    setCartItems([...cartItems, newItem]);
-  };
+  const IncCart = ()=>{
+    setCartItems(cartItems.length)
+  }
+
+ 
 
   return (
     <>
@@ -42,7 +49,7 @@ const ProductPage = ({ cartItems, setCartItems }) => {
             <h2>{item.title}</h2>
             <h3>{item.price}$</h3>
             <button
-              onClick={() => addToCart(item.id, item.title, item.price, item.image)}
+              onClick={() => addToCart(item.id, item.price,item.title, item.image)}
               className="btn"
             >
               Add
@@ -50,7 +57,7 @@ const ProductPage = ({ cartItems, setCartItems }) => {
           </div>
         ))}
       </div>
-      {cartItems.length === 0 && <p>Your Cart Is Empty</p>}
+      
     </>
   );
 };

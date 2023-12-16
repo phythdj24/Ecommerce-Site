@@ -5,7 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CartPage from './components/CartPage';
 
 function App() {
-  const [cartItems, setCartItems] = useState([]);
+  
+  const [cartItems, setCartItems] = useState([])
 
   return (
     <>
@@ -13,11 +14,11 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<ProductPage cartItems={cartItems} setCartItems={setCartItems} />}
+            element={<ProductPage cartItems={cartItems} setCartItems={setCartItems}/>}
           />
           <Route
             path="/cart"
-            element={<CartPage cartItems={cartItems} setCartItems={setCartItems} />}
+            element={<CartPage cartItems={cartItems} setCartItems={setCartItems} />} 
           />
         </Routes>
       </BrowserRouter>
